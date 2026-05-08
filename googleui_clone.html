@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column; background: #fff; }
+
+    .top-nav { display: flex; justify-content: flex-end; align-items: center; gap: 12px; padding: 14px 20px; }
+    .top-nav a { font-size: 13px; color: #202124; text-decoration: none; }
+    .top-nav a:hover { text-decoration: underline; }
+    .sign-in-btn { background: #1a73e8; color: #fff; border: none; padding: 8px 18px; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; }
+    .sign-in-btn:hover { background: #1765cc; }
+
+    .main { display: flex; flex-direction: column; align-items: center; padding: 100px 20px 28px; flex: 1; }
+
+    .google-logo { display: flex; margin-bottom: 28px; }
+    .logo-letter { font-size: 72px; font-weight: 700; font-family: arial, sans-serif; line-height: 1; }
+    .l-blue  { color: #4285F4; }
+    .l-red   { color: #EA4335; }
+    .l-yellow{ color: #FBBC05; }
+    .l-green { color: #34A853; }
+
+    .search-box { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 584px; gap: 18px; }
+
+    .search-input-wrap { width: 100%; display: flex; align-items: center; border: 1px solid #dfe1e5; border-radius: 24px; padding: 8px 16px; gap: 10px; background: #fff; }
+    .search-input-wrap:hover,
+    .search-input-wrap:focus-within { box-shadow: 0 1px 6px rgba(32,33,36,0.28); border-color: rgba(223,225,229,0); }
+
+    .search-icon { width: 20px; height: 20px; flex-shrink: 0; }
+    .search-input { border: none; outline: none; font-size: 16px; color: #202124; width: 100%; background: transparent; }
+    .mic-icon { width: 20px; height: 20px; flex-shrink: 0; cursor: pointer; }
+
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .search-btn { background: #f8f9fa; border: 1px solid #f8f9fa; border-radius: 4px; color: #3c4043; font-size: 14px; padding: 9px 20px; cursor: pointer; height: 36px; }
+    .search-btn:hover { box-shadow: 0 1px 1px rgba(0,0,0,.1); border-color: #dadce0; color: #202124; }
+
+    .lang-row { font-size: 13px; color: #70757a; }
+    .lang-row a { color: #1a0dab; text-decoration: none; margin: 0 3px; }
+    .lang-row a:hover { text-decoration: underline; }
+
+    .footer { background: #f2f2f2; border-top: 1px solid #e4e4e4; }
+    .footer-top { padding: 14px 30px; font-size: 15px; color: #70757a; border-bottom: 1px solid #e4e4e4; }
+    .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 10px 30px; gap: 8px; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { font-size: 13px; color: #70757a; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; color: #1a73e8; }
+
+    @media (max-width: 480px) {
+      .logo-letter { font-size: 52px; }
+      .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-nav">
+    <a href="#">Gmail</a>
+    <a href="#">Images</a>
+    <button class="sign-in-btn">Sign in</button>
+  </div>
+
+  <div class="main">
+    <div class="google-logo">
+      <span class="logo-letter l-blue">G</span>
+      <span class="logo-letter l-red">o</span>
+      <span class="logo-letter l-yellow">o</span>
+      <span class="logo-letter l-blue">g</span>
+      <span class="logo-letter l-green">l</span>
+      <span class="logo-letter l-red">e</span>
+    </div>
+
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input class="search-input" type="text" placeholder="" />
+        <svg class="mic-icon" viewBox="0 0 24 24" fill="none">
+          <rect x="9" y="2" width="6" height="12" rx="3" fill="#4285F4"/>
+          <path d="M5 10a7 7 0 0 0 14 0" stroke="#34A853" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <line x1="12" y1="17" x2="12" y2="21" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+          <line x1="9" y1="21" x2="15" y2="21" stroke="#FBBC05" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="btn-row">
+        <button class="search-btn">Google Search</button>
+        <button class="search-btn">I'm Feeling Lucky</button>
+      </div>
+
+      <div class="lang-row">
+        Google offered in:
+        <a href="#">हिन्दी</a>
+        <a href="#">বাংলা</a>
+        <a href="#">తెలుగు</a>
+        <a href="#">मराठी</a>
+        <a href="#">தமிழ்</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">India</div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="#">Advertising</a>
+        <a href="#">Business</a>
+        <a href="#">How Search works</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
