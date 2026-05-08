@@ -1,11 +1,11 @@
-# Task 3 — Google Homepage Clone 
+# Task 3 - Google Homepage Clone 
 
 A pixel-perfect clone of the **Google.com** homepage UI built using only **HTML** and **CSS** as part of my Web Development Internship at **Kodbud**.
 
 ---
 
 ## Task
-**Task 3 — Clone the Google Homepage**
+**Task 3 - Clone the Google Homepage**
 > Recreate the Google.com homepage UI using only HTML and CSS. No search functionality required.
 
 ---
